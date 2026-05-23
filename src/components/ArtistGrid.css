@@ -1,0 +1,79 @@
+.artist-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  gap: 2rem;
+  padding: 0 3rem; /* Default large screen padding */
+}
+
+@media (max-width: 768px) {
+  .artist-scroll-container {
+    padding: 0 1rem; /* Less padding on mobile */
+  }
+}
+
+.artist-card {
+  flex-shrink: 0;
+  width: 170px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background: transparent;
+  padding: 0.5rem 0;
+  border-radius: 0;
+}
+
+.artist-card:hover .artist-img {
+  transform: scale(1.08);
+}
+
+.artist-img {
+  width: 170px;         /* Increased from 100px */
+  height: 170px;  
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+}
+
+.artist-name {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.6rem;
+}
+
+.artist-genre {
+  color: #a78bfa;
+  font-size: 0.7rem;
+  margin-top: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Scroll buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(55, 65, 81, 0.8);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  z-index: 10;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.scroll-btn:hover {
+  background: rgba(75, 85, 99, 0.9);
+}

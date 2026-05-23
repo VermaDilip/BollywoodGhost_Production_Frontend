@@ -1,0 +1,32 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-cd {
+  animation: spin 10s linear infinite;
+}
+
+.rhap_container {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Optional: reduce gaps on mobile */
+@media (max-width: 640px) {
+  .rhap_main-controls {
+    gap: 0.25rem !important;
+  }
+
+  .rhap_time {
+    font-size: 0.65rem;
+  }
+
+  .rhap_volume-bar {
+    width: 60px !important;
+  }
+}
